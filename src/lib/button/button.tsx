@@ -1,11 +1,19 @@
 import styled from "styled-components";
+import { Icon } from "../icon";
+import { icons } from "../icon";
 
 interface IButtonProps {
+	text: string;
 	appearance: "primary" | "secondary" | "tertiary";
 	size: "small" | "base";
 	disabled?: boolean;
-	iconBefore?: React.ReactNode;
-	iconAfter?: React.ReactNode;
+	iconBefore?: typeof icons;
+	iconAfter?:
+		| "user"
+		| "chevronUp"
+		| "chevronRight"
+		| "chevronLeft"
+		| "chevronDown";
 }
 
 const StyledButton = styled.button<IButtonProps>`
@@ -48,40 +56,47 @@ const StyledButton = styled.button<IButtonProps>`
 	${(props) =>
 		props.appearance === "primary" &&
 		`
-            background: ${props.theme.colors.bg.lead.loud.enabled};
-            color: ${props.theme.colors.text.inverted};
-            border-color: ${props.theme.colors.border.lead.loud.enabled};
-
+            &:enabled {
+                background: ${props.theme.colors.bg.lead.loud.enabled};
+                color: ${props.theme.colors.text.inverted};
+                border-color: ${props.theme.colors.border.lead.loud.enabled};
+            }
             &:hover {
-            background: ${props.theme.colors.bg.lead.loud.hover};
-            color: ${props.theme.colors.text.inverted};
-            border-color: ${props.theme.colors.border.lead.loud.hover};
+                background: ${props.theme.colors.bg.lead.loud.hover};
+                color: ${props.theme.colors.text.inverted};
+                border-color: ${props.theme.colors.border.lead.loud.hover};
             }
 
             &:active {
-            background: ${props.theme.colors.bg.lead.loud.active};
-            color: ${props.theme.colors.text.inverted};
-            border-color: ${props.theme.colors.border.lead.loud.active};
-            }
+                background: ${props.theme.colors.bg.lead.loud.active};
+                color: ${props.theme.colors.text.inverted};
+                border-color: ${props.theme.colors.border.lead.loud.active};
+            } 
         `}
 
 	${(props) =>
 		props.appearance === "secondary" &&
 		`
-            background: transparent;
-            color: ${props.theme.colors.link.loud.enabled};
-            border-color: ${props.theme.colors.border.lead.loud.enabled};
+            &:enabled {
+                background: transparent;
+                color: ${props.theme.colors.link.loud.enabled};
+                border-color: ${props.theme.colors.border.lead.loud.enabled};
+            }
+            
 
             &:hover {
-            background: transparent;
-            color: ${props.theme.colors.link.loud.hover};
-            border-color: ${props.theme.colors.border.lead.loud.hover};
+                background: transparent;
+                color: ${props.theme.colors.link.loud.hover};
+                border-color: ${props.theme.colors.border.lead.loud.hover};
             }
 
             &:active {
-            background: transparent;
-           color: ${props.theme.colors.link.loud.active};
-            border-color: ${props.theme.colors.border.lead.loud.active};
+                background: transparent;
+                color: ${props.theme.colors.link.loud.active};
+                border-color: ${props.theme.colors.border.lead.loud.active};
+            }
+
+           
             }
 
         `}
@@ -101,9 +116,14 @@ const StyledButton = styled.button<IButtonProps>`
             border: ${props.theme.colors.border.disabled};}
 
             `}
+
+            &:focus {
+		box-shadow: 0px 0px 0px 2px rgba(79, 96, 255, 0.25);
+	}
 `;
 
 export const Button: React.FC<IButtonProps> = ({
+	text = "Hello",
 	appearance,
 	size,
 	disabled,
@@ -111,10 +131,19 @@ export const Button: React.FC<IButtonProps> = ({
 	iconBefore,
 }) => {
 	return (
-		<StyledButton appearance={appearance} size={size} disabled={disabled}>
-			{iconBefore ? iconBefore : null}
-			Hello
-			{iconAfter ? iconAfter : null}
+		<StyledButton
+			appearance={appearance}
+			size={size}
+			disabled={disabled}
+			text={text}
+		>
+			{iconBefore ? (
+				<Icon iconName={iconBefore} size={size === "base" ? 20 : 16} />
+			) : null}
+			{text}
+			{iconAfter ? (
+				<Icon iconName={iconAfter} size={size === "base" ? 20 : 16} />
+			) : null}
 		</StyledButton>
 	);
 };

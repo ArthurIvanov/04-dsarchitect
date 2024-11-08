@@ -14,9 +14,17 @@ function App() {
 
 				<Button
 					appearance="primary"
-					size="small"
-					iconBefore={<Icon iconName="user" size={16} />}
-					iconAfter={<Icon iconName="user" size={16} />}
+					size="base"
+					iconBefore="chevronUp"
+					iconAfter="user"
+					text="Hello DS"
+				/>
+				<Button
+					appearance="secondary"
+					size="base"
+					iconBefore="chevronUp"
+					iconAfter="user"
+					text="Hello DS"
 				/>
 				{/* <Button appearance="secondary" size="small" /> */}
 			</main>
