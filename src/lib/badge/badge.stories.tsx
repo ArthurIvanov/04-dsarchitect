@@ -6,7 +6,7 @@ export default {
 	component: Badge,
 	parameters: {
 		status: {
-			type: "stable", // 'beta' | 'stable' | 'deprecated' | 'releaseCandidate'
+			type: "deprecated", // 'beta' | 'stable' | 'deprecated' | 'releaseCandidate'
 		},
 	},
 
@@ -57,6 +57,14 @@ export const Sizes = {
 	args: {
 		text: "Бейдж",
 		appearance: "blue",
+		size: "small",
+	},
+};
+
+export const GreenSmall = {
+	args: {
+		text: "Бейдж",
+		appearance: "green",
 		size: "small",
 	},
 };

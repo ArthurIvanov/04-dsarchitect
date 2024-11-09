@@ -65,7 +65,7 @@ const StyledBadge = styled.div<IBadgeProps>`
 `;
 /**
  *
- * Allows user determine context of interface and give more data about it |
+ *
  * Позволяет пользователю определить контекст интерфейса и предоставить больше данных о нем
  *
  */
