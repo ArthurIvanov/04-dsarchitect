@@ -4,8 +4,8 @@ export default {
 	title: "Компоненты/Card",
 	component: Card,
 	parameters: {
+		layout: "centered",
 		status: {
-			layout: "centered",
 			type: "beta", // 'beta' | 'stable' | 'deprecated' | 'releaseCandidate'
 		},
 	},

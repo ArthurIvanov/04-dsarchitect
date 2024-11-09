@@ -10,8 +10,6 @@ export default {
 		},
 		tags: ["autodocs"],
 	},
-
-	tags: ["autodocs"],
 };
 
 export const Base = {
