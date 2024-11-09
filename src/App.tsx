@@ -1,7 +1,13 @@
 import React from "react";
 import { GlobalStyle } from "./lib/theme";
-import { Placeholder, Button, lightTheme, darkTheme } from "./lib";
-import { Icon } from "./lib/icon";
+import {
+	Placeholder,
+	Button,
+	lightTheme,
+	darkTheme,
+	ButtonLink,
+	Badge,
+} from "./lib";
 import { ThemeProvider } from "styled-components";
 
 function App() {
@@ -10,8 +16,6 @@ function App() {
 		<ThemeProvider theme={switcher ? darkTheme : lightTheme}>
 			<GlobalStyle />
 			<main>
-				{/* <Placeholder text="Поехали!" /> */}
-
 				<Button
 					appearance="primary"
 					size="base"
@@ -26,7 +30,12 @@ function App() {
 					iconAfter="user"
 					text="Hello DS"
 				/>
-				{/* <Button appearance="secondary" size="small" /> */}
+				<ButtonLink
+					appearance="primary"
+					text="Подробнее"
+					iconAfter="chevronRight"
+				/>
+				<Badge appearance="blue" text="hello" size="small" />
 			</main>
 		</ThemeProvider>
 	);

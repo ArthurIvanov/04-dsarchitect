@@ -1,13 +1,17 @@
 import styled from "styled-components";
 import { Icon } from "../icon";
-import { icons } from "../icon";
 
 interface IButtonProps {
 	text: string;
 	appearance: "primary" | "secondary" | "tertiary";
 	size: "small" | "base";
 	disabled?: boolean;
-	iconBefore?: typeof icons;
+	iconBefore?:
+		| "user"
+		| "chevronUp"
+		| "chevronRight"
+		| "chevronLeft"
+		| "chevronDown";
 	iconAfter?:
 		| "user"
 		| "chevronUp"
