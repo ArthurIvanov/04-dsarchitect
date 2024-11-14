@@ -12,35 +12,26 @@ export default {
 	tags: ["autodocs"],
 };
 
-export const BadgeSizeBase = {
+export const SizeBase = {
 	args: {
-		text: "Hello this is a badge",
+		text: "Hello",
 		size: "base",
 		appearance: "blue",
 	},
 };
 
-export const BadgeSizeSmall = {
+export const BadgeSizeBase = {
 	args: {
-		text: "Hello this is a badge",
-		size: "small",
+		text: "Hello",
+		size: "base",
 		appearance: "blue",
 	},
 };
-
 export const Outlined = {
 	args: {
-		text: "Hello this is a badge",
-		size: "small",
+		text: "Hello",
+		size: "base",
 		appearance: "blue",
 		outlined: true,
-	},
-};
-
-export const AppearanceGreen = {
-	args: {
-		text: "Hello this is a badge",
-		size: "small",
-		appearance: "green",
 	},
 };
