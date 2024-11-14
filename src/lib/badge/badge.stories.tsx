@@ -1,70 +1,46 @@
 import { Badge } from "./badge";
-// import "../../stories/stories.styles.css";
 
 export default {
 	title: "Компоненты/Badge",
 	component: Badge,
 	parameters: {
+		layout: "centered",
 		status: {
-			type: "deprecated", // 'beta' | 'stable' | 'deprecated' | 'releaseCandidate'
+			type: "beta", // 'beta' | 'stable' | 'deprecated' | 'releaseCandidate'
 		},
 	},
-
 	tags: ["autodocs"],
 };
 
-export const Blue = {
+export const BadgeSizeBase = {
 	args: {
-		text: "Бейдж",
+		text: "Hello this is a badge",
+		size: "base",
 		appearance: "blue",
-		size: "base",
 	},
 };
 
-export const Green = {
+export const BadgeSizeSmall = {
 	args: {
-		text: "Бейдж",
-		appearance: "green",
-		size: "base",
-	},
-};
-
-export const Pink = {
-	args: {
-		text: "Бейдж",
-		appearance: "pink",
-		size: "base",
-	},
-};
-
-export const Cyan = {
-	args: {
-		text: "Бейдж",
-		appearance: "cyan",
-		size: "base",
-	},
-};
-
-export const Grey = {
-	args: {
-		text: "Бейдж",
-		appearance: "grey",
-		size: "base",
-	},
-};
-
-export const Sizes = {
-	args: {
-		text: "Бейдж",
+		text: "Hello this is a badge",
+		size: "small",
 		appearance: "blue",
-		size: "small",
 	},
 };
 
-export const GreenSmall = {
+export const Outlined = {
 	args: {
-		text: "Бейдж",
-		appearance: "green",
+		text: "Hello this is a badge",
 		size: "small",
+		appearance: "blue",
+		outlined: true,
+	},
+};
+
+export const AppearanceGreen = {
+	args: {
+		text: "Hello this is a badge",
+		size: "small",
+		appearance: "green",
 	},
 };

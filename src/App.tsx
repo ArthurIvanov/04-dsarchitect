@@ -7,7 +7,6 @@ import {
 	darkTheme,
 	ButtonLink,
 	Badge,
-	Card,
 } from "./lib";
 import { ThemeProvider } from "styled-components";
 
@@ -17,11 +16,12 @@ function App() {
 		<ThemeProvider theme={switcher ? darkTheme : lightTheme}>
 			<GlobalStyle />
 			<main>
-				<Card text="Подразделение ветроэнергетического дивизиона «Росатома» и «Кьези» подписали соглашение на приобретение «зеленых» сертификатов I-REC" />
-				<Card
-					text="Подразделение ветроэнергетического дивизиона «Росатома» и «Кьези» подписали соглашение на приобретение «зеленых» сертификатов I-REC"
-					textSize="large"
-					badgeText="Важное"
+				<Badge size="base" text="Hello world" />
+				<Badge
+					outlined
+					appearance="green"
+					size="small"
+					text="Hello world"
 				/>
 			</main>
 		</ThemeProvider>

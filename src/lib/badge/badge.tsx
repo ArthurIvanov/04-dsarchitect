@@ -1,82 +1,78 @@
-import { FC, HTMLAttributes } from "react";
 import styled from "styled-components";
 
-export interface IBadgeProps extends HTMLAttributes<HTMLSpanElement> {
-	/**
-	 *
-	 * Text within a component |
-	 * Текст внутри конпонента
-	 *
-	 */
+interface IBadgeProps {
 	text: string;
-
-	/**
-	 *
-	 * appearance background of the component |
-	 * Акцентный фон компонента
-	 *
-	 */
-	appearance?: "blue" | "green" | "pink" | "cyan" | "grey";
-
-	/**
-	 *
-	 * Makes visual less prominent |
-	 * Делает вид менее явным
-	 *
-	 */
-
-	/**
-	 *
-	 * Size of component |
-	 * Задает размер компонента
-	 *
-	 */
-	size?: "small" | "base";
+	size?: "base" | "small";
+	appearance?: "blue" | "cyan" | "green" | "pink" | "grey";
+	outlined?: boolean;
 }
 
 const StyledBadge = styled.div<IBadgeProps>`
-	box-sizing: border-box;
 	display: inline-flex;
 	flex-direction: row;
 	align-items: center;
-	align-content: center;
 	justify-content: center;
 	border: 1px solid;
-	font-weight: 500;
+	border-radius: 0;
+	font-family: ${(props) => props.theme.typography.fontFamily.text};
 
 	${(props) =>
-		props.size &&
+		props.size === "base" &&
 		`
-        line-height: ${props.theme.typography.lineHeight.component[props.size]};
-        font-size: ${props.theme.typography.fontSize.component[props.size]};
-        padding: 4px 8px;
+        font-size: ${props.theme.typography.fontSize.component.base};
+        line-height: ${props.theme.typography.lineHeight.component.base};
+        font-weight: ${props.theme.typography.fontWeight.medium};
+        height: ${props.theme.spacing.height.small};
+        padding: 0 ${props.theme.spacing.padding.default};
         `}
 
 	${(props) =>
+		props.size === "small" &&
+		`
+        font-size: ${props.theme.typography.fontSize.component.small};
+        line-height: ${props.theme.typography.lineHeight.component.small};
+        font-weight: ${props.theme.typography.fontWeight.medium};
+        height: ${props.theme.spacing.height.xSmall};
+        padding: 0 ${props.theme.spacing.padding.compact};
+        `}
+
+        ${(props) =>
 		props.appearance &&
 		`
-        border-color: ${
-			props.theme.colors.border[props.appearance].bold.enabled
-		};
-        background: ${props.theme.colors.bg[props.appearance].bold.enabled};
-        color: ${props.theme.colors.text[props.appearance].calm.enabled};
-    
-    `}
+            background: ${props.theme.colors.bg[props.appearance].bold.enabled};
+            color: ${props.theme.colors.text[props.appearance].calm.enabled};
+            border-color: ${
+				props.theme.colors.border[props.appearance].calm.enabled
+			};
+            `}
+
+
+        ${(props) =>
+		props.outlined &&
+		props.appearance &&
+		`
+            background: ${props.theme.colors.bg[props.appearance].calm.enabled};
+            color: ${props.theme.colors.text[props.appearance].bold.enabled};
+            border-color: ${
+				props.theme.colors.border[props.appearance].calm.enabled
+			};
+            
+            `}
 `;
-/**
- *
- *
- * Позволяет пользователю определить контекст интерфейса и предоставить больше данных о нем
- *
- */
-export const Badge: FC<IBadgeProps> = ({
+
+export const Badge: React.FC<IBadgeProps> = ({
 	text,
-	appearance,
-	size = "base",
-	...props
+	size = "small",
+	appearance = "grey",
+	outlined,
 }) => {
 	return (
-		<StyledBadge size={size} text={text} appearance={appearance} {...props}>
+		<StyledBadge
+			outlined={outlined}
+			appearance={appearance}
+			size={size}
+			text={text}
+		>
 			{text}
 		</StyledBadge>
 	);

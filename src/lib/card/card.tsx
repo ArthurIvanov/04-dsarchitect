@@ -8,7 +8,7 @@ interface ICardProps {
 	 */
 	children?: React.ReactNode;
 	/**
-	 * Переключение размера шрифта
+	 * Меняет размер шрифта
 	 */
 	textSize?: "base" | "large";
 	/**
