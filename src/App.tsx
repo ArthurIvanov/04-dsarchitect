@@ -6,6 +6,7 @@ import {
 	lightTheme,
 	darkTheme,
 	ButtonLink,
+	Label,
 	InlineMessage,
 	Badge,
 } from "./lib";
@@ -18,6 +19,8 @@ function App() {
 			<GlobalStyle />
 			<main>
 				<InlineMessage status="critical" text="hello" />
+				<Label text="label" required />
+				<Label text="label" />
 				<Badge size="base" text="Hello world" />
 				<Badge
 					outlined
