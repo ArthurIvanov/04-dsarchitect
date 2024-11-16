@@ -204,7 +204,7 @@ export const lightTheme: DefaultTheme = {
 				calm: {
 					enabled: pallete.green[50],
 				},
-				bold: {
+				loud: {
 					enabled: pallete.green[400],
 				},
 			},
@@ -212,7 +212,7 @@ export const lightTheme: DefaultTheme = {
 				calm: {
 					enabled: pallete.cyan[50],
 				},
-				bold: {
+				loud: {
 					enabled: pallete.cyan[400],
 				},
 			},
@@ -220,7 +220,7 @@ export const lightTheme: DefaultTheme = {
 				calm: {
 					enabled: pallete.blue[50],
 				},
-				bold: {
+				loud: {
 					enabled: pallete.blue[400],
 				},
 			},
@@ -228,7 +228,7 @@ export const lightTheme: DefaultTheme = {
 				calm: {
 					enabled: pallete.pink[50],
 				},
-				bold: {
+				loud: {
 					enabled: pallete.pink[400],
 				},
 			},
@@ -236,7 +236,7 @@ export const lightTheme: DefaultTheme = {
 				calm: {
 					enabled: pallete.grey[50],
 				},
-				bold: {
+				loud: {
 					enabled: pallete.grey[400],
 				},
 			},
@@ -244,7 +244,7 @@ export const lightTheme: DefaultTheme = {
 				calm: {
 					enabled: pallete.red[50],
 				},
-				bold: {
+				loud: {
 					enabled: pallete.red[400],
 				},
 			},

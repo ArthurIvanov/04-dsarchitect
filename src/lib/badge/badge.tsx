@@ -64,7 +64,7 @@ const StyledBadge = styled.div<IBadgeProps>`
 		props.appearance &&
 		`
             background: ${props.theme.colors.bg[props.appearance].calm.enabled};
-            color: ${props.theme.colors.text[props.appearance].bold.enabled};
+            color: ${props.theme.colors.text[props.appearance].loud.enabled};
             border-color: ${
 				props.theme.colors.border[props.appearance].calm.enabled
 			};

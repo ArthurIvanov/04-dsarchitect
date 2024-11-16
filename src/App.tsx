@@ -6,6 +6,7 @@ import {
 	lightTheme,
 	darkTheme,
 	ButtonLink,
+	InlineMessage,
 	Badge,
 } from "./lib";
 import { ThemeProvider } from "styled-components";
@@ -16,6 +17,7 @@ function App() {
 		<ThemeProvider theme={switcher ? darkTheme : lightTheme}>
 			<GlobalStyle />
 			<main>
+				<InlineMessage status="critical" text="hello" />
 				<Badge size="base" text="Hello world" />
 				<Badge
 					outlined

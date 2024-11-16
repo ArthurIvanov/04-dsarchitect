@@ -204,7 +204,7 @@ declare module "styled-components" {
 					calm: {
 						enabled: string;
 					};
-					bold: {
+					loud: {
 						enabled: string;
 					};
 				};
@@ -212,7 +212,7 @@ declare module "styled-components" {
 					calm: {
 						enabled: string;
 					};
-					bold: {
+					loud: {
 						enabled: string;
 					};
 				};
@@ -220,7 +220,7 @@ declare module "styled-components" {
 					calm: {
 						enabled: string;
 					};
-					bold: {
+					loud: {
 						enabled: string;
 					};
 				};
@@ -228,7 +228,7 @@ declare module "styled-components" {
 					calm: {
 						enabled: string;
 					};
-					bold: {
+					loud: {
 						enabled: string;
 					};
 				};
@@ -236,7 +236,7 @@ declare module "styled-components" {
 					calm: {
 						enabled: string;
 					};
-					bold: {
+					loud: {
 						enabled: string;
 					};
 				};
@@ -244,7 +244,7 @@ declare module "styled-components" {
 					calm: {
 						enabled: string;
 					};
-					bold: {
+					loud: {
 						enabled: string;
 					};
 				};
