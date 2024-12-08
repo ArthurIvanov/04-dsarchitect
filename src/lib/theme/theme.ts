@@ -570,7 +570,7 @@ export const darkTheme: DefaultTheme = {
 				calm: {
 					enabled: pallete.green[800],
 				},
-				bold: {
+				loud: {
 					enabled: pallete.green[200],
 				},
 			},
@@ -578,7 +578,7 @@ export const darkTheme: DefaultTheme = {
 				calm: {
 					enabled: pallete.cyan[800],
 				},
-				bold: {
+				loud: {
 					enabled: pallete.cyan[200],
 				},
 			},
@@ -586,7 +586,7 @@ export const darkTheme: DefaultTheme = {
 				calm: {
 					enabled: pallete.blue[800],
 				},
-				bold: {
+				loud: {
 					enabled: pallete.blue[200],
 				},
 			},
@@ -594,7 +594,7 @@ export const darkTheme: DefaultTheme = {
 				calm: {
 					enabled: pallete.pink[800],
 				},
-				bold: {
+				loud: {
 					enabled: pallete.pink[200],
 				},
 			},
@@ -602,7 +602,7 @@ export const darkTheme: DefaultTheme = {
 				calm: {
 					enabled: pallete.grey[800],
 				},
-				bold: {
+				loud: {
 					enabled: pallete.grey[200],
 				},
 			},
@@ -610,7 +610,7 @@ export const darkTheme: DefaultTheme = {
 				calm: {
 					enabled: pallete.red[800],
 				},
-				bold: {
+				loud: {
 					enabled: pallete.red[200],
 				},
 			},

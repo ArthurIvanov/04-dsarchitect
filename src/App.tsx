@@ -1,15 +1,6 @@
 import React from "react";
 import { GlobalStyle } from "./lib/theme";
-import {
-	Placeholder,
-	Button,
-	lightTheme,
-	darkTheme,
-	ButtonLink,
-	Label,
-	InlineMessage,
-	Badge,
-} from "./lib";
+import { Placeholder, Button, lightTheme, darkTheme, InputText } from "./lib";
 import { ThemeProvider } from "styled-components";
 
 function App() {
@@ -18,16 +9,7 @@ function App() {
 		<ThemeProvider theme={switcher ? darkTheme : lightTheme}>
 			<GlobalStyle />
 			<main>
-				<InlineMessage status="critical" text="hello" />
-				<Label text="label" required />
-				<Label text="label" />
-				<Badge size="base" text="Hello world" />
-				<Badge
-					outlined
-					appearance="green"
-					size="small"
-					text="Hello world"
-				/>
+				<InputText label="This is a label" helpMessage="Coool!" />
 			</main>
 		</ThemeProvider>
 	);

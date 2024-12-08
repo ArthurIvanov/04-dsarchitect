@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 interface IInlineMessage {
-	status: "default" | "critical";
-	text: string;
+	status?: "default" | "critical";
+	text?: string;
 }
 
 const StyledInlineMessage = styled.span<IInlineMessage>`

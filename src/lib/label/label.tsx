@@ -11,6 +11,8 @@ const StyledLabel = styled.span<ILabel>`
 	line-height: ${(props) => props.theme.typography.lineHeight.text.small};
 	font-weight: ${(props) => props.theme.typography.fontWeight.medium};
 	color: ${(props) => props.theme.colors.text.secondary};
+	display: inline-flex;
+	gap: ${(props) => props.theme.spacing.inner.closest};
 
 	.label-required {
 		color: ${(props) => props.theme.colors.text.critical.loud.enabled};
